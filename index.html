@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkyFrost</title>
+    <title>SkyFrost - Weather Forecast</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="indxe.css">
 </head>
 <body>
-    <header>
-        <h2 class="header">SkyFrost Weather App</h2>
-    </header>
-    <div>
+    <div class="background-gradient"></div>
+    
+    <div class="theme-toggle">
         <input type="checkbox" class="checkbox" id="chk" />
         <label class="label" for="chk">
             <i class="fas fa-moon"></i>
@@ -20,12 +20,33 @@
         </label>
     </div>
 
-    <div>
-        <form id="form"><input type="text" id="search" placeholder="Search By Loaction" autocomplete="off">  
-        </form>  
-        <main id="main">  
+    <header class="header-section">
+        <h1 class="app-title">
+            <i class="fas fa-cloud-sun"></i> SkyFrost
+        </h1>
+        <p class="app-subtitle">Weather Forecast App</p>
+    </header>
+
+    <div class="container">
+        <form id="form" class="search-form">
+            <div class="search-wrapper">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="search" placeholder="Search by location..." autocomplete="off" class="search-input">
+                <button type="submit" class="search-button" title="Search">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <div id="suggestions" class="suggestions-list"></div>
+            </div>
+        </form>
+        
+        <main id="main" class="weather-container">
+            <div class="placeholder">
+                <i class="fas fa-magnifying-glass"></i>
+                <p>Search for a city to see the weather</p>
+            </div>
         </main>
     </div>
-        <script src="index.js"></script>
+
+    <script src="index.js"></script>
 </body>
 </html>
